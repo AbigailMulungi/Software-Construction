@@ -1,0 +1,68 @@
+Single Responsibility Principle (SRP):
+1.	Violation: Report Class:
+	The Report class is responsible for both generating reports and writing reports. It should ideally have a single responsibility.
+Open/Closed Principle (OCP):
+1.	Violation: Report Class:
+	The generate_report method in the Report class needs to be modified every time a new role (e.g., a new type of employee) is added. This violates the open/closed principle.
+
+2.	Violation: BonusCalculator Class:
+	Similar to the Report class, the BonusCalculator class needs modification whenever a new role is added.
+Liskov Substitution Principle (LSP):
+1.	Violation: Manager and Developer Classes:
+	The Manager and Developer classes are subclasses of Employee. While they seem fine in terms of substitutability, the fact that they have role-specific bonus calculation methods (calculate_manager_bonus and calculate_developer_bonus) suggests a potential violation.
+Interface Segregation Principle (ISP):
+1.	Violation: Employee Class:
+	The Employee class acts as a general interface for both managers and developers. However, not all methods defined in Employee are relevant to all subclasses (e.g., manage_team and code_review). This violates the ISP.
+Dependency Inversion Principle (DIP):
+1.	Violation: Report Class and BonusCalculator Class:
+	Both the Report and BonusCalculator classes have a direct dependency on concrete implementations (Manager and Developer). This makes it harder to extend or modify the behavior without modifying these classes.
+
+Recommendations:
+1.	SRP: Create a separate class for report generation (ReportGenerator) and move the role-specific report-writing methods into their respective classes (Manager and Developer).
+2.	OCP: Introduce a strategy pattern for bonus calculation, allowing for easy extension without modifying existing classes.
+3.	LSP: Ensure that the behavior of the subclasses (Manager and Developer) adheres to the expectations of the base class (Employee).
+4.	ISP: Consider creating separate interfaces for managers and developers to adhere to the ISP. Implement these interfaces in the respective classes.
+5.	DIP: Use abstractions (e.g., interfaces) to define dependencies in the Report and BonusCalculator classes, allowing for easier substitution of implementations.
+
+Refactoring Plan:
+1. Single Responsibility Principle (SRP):
+Refactoring Task:
+Create a new class, say ReportGenerator, responsible for generating reports.
+Move the report-writing methods (write_manager_report and write_developer_report) from the Report class to their respective classes (Manager and Developer).
+Benefits:Separation of concerns: The Report class focuses on report generation, and individual classes handle report writing.
+Improved maintainability: Each class has a clear and single responsibility.
+
+2. Open/Closed Principle (OCP):
+Refactoring Task:
+Introduce a strategy pattern for bonus calculation in the BonusCalculator class.
+Create an interface (e.g., BonusStrategy) with methods like calculate_bonus for each role.
+Implement concrete classes (ManagerBonusStrategy and DeveloperBonusStrategy) for each role.
+Benefits:Open for extension: Easily add new roles and corresponding bonus calculation strategies without modifying existing code.
+Closed for modification: The BonusCalculator class does not need to change when new roles are added.
+
+3. Liskov Substitution Principle (LSP):
+Refactoring Task:
+Reevaluate the necessity of role-specific bonus calculation methods (calculate_manager_bonus and calculate_developer_bonus) in the Manager and Developer classes.
+If possible, consider a more general approach to bonus calculation in the base Employee class.
+Benefits:Improved substitutability: Ensure that subclasses don't alter base class behavior in a way that breaks client code expectations.
+
+4. Interface Segregation Principle (ISP):
+Refactoring Task:
+Create separate interfaces for managers and developers, each containing methods relevant to the specific role (e.g., ManagerInterface and DeveloperInterface).
+Implement these interfaces in the respective classes (Manager and Developer).
+Benefits:Adherence to ISP: Ensure that each class only implements the methods it needs, avoiding unnecessary dependencies.
+
+5. Dependency Inversion Principle (DIP):
+Refactoring Task:
+Introduce abstractions (e.g., interfaces) to define dependencies in the Report and BonusCalculator classes.
+Instead of relying directly on concrete implementations (Manager and Developer), use interfaces (e.g., Reportable and Calculatable).
+Benefits:Reduced coupling: Depend on abstractions rather than concrete implementations, making it easier to substitute implementations.
+Improved flexibility: Allows for easier modification and extension without affecting high-level modules.
+
+Prioritization:
+1.	SRP: Prioritize this refactoring as it directly improves code organization and maintainability.
+2.	OCP: After addressing SRP, implement the strategy pattern for bonus calculation. This ensures future extensibility.
+3.	DIP: Implement abstractions in the Report and BonusCalculator classes to reduce dependencies on concrete implementations.
+4.	ISP: Create separate interfaces for managers and developers to adhere to ISP. This will enhance code clarity.
+5.	LSP: Reevaluate the necessity of role-specific methods in the Manager and Developer classes after other refactorings.
+
