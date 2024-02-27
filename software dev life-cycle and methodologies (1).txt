@@ -1,0 +1,59 @@
+The Software Development Life Cycle (SDLC) is a systematic process for planning, creating, testing, deploying, and maintaining software. It typically includes the following stages:
+
+1.Planning:Defining the project, gathering requirements, and creating a project plan.
+
+2.Analysis:Studying the requirements and creating a detailed system specification.
+
+3.Design: Creating the architecture of the system and designing how components will interact.
+
+4.Implementation (Coding):Writing the actual code based on the design.
+
+5.Testing: Systematically checking and testing the software to identify and fix bugs.
+
+6.Deployment:Releasing the software for general use.
+
+7.Maintenance:Regularly updating and improving the software to meet changing needs or to fix issues.
+
+These stages are often represented as a cycle because after deployment, software might undergo updates or improvements, starting the cycle anew. Each phase is crucial for delivering a reliable and high-quality software product.
+
+
+Several software development life cycle (SDLC) methodologies exist, each with its own set of principles, practices, and advantages. Here are some of the most commonly used SDLC methodologies and examples of companies that use them:
+
+1.Agile Model: An iterative and flexible approach that emphasizes collaboration, customer feedback, and the ability to respond to changes quickly. Popular Agile frameworks include Scrum, Kanban, and Extreme Programming (XP).
+
+   Scrum:
+   - A specific Agile framework that divides the development process into fixed-length iterations called sprints.
+   - Involves key roles like Scrum Master, Product Owner, and Development Team.
+
+   Kanban:
+   - An Agile methodology that focuses on visualizing work, limiting work in progress, and maximizing flow.
+   - Work items are represented on a Kanban board, and the team moves them through different stages.
+
+   Extreme Programming (XP):
+   - An Agile methodology that emphasizes customer satisfaction, frequent releases, and continuous testing.
+   - Key practices include pair programming, continuous integration, and test-driven development.
+
+Examples of companies that use the Agile Model are:
+1.Google: Google is known for its Agile practices, and teams within Google may use iterative models like Scrum or Kanban.
+
+2.Facebook:Facebook (now Meta) has embraced Agile methodologies, particularly Scrum, to support its dynamic and fast-paced development environment.
+
+
+2. Iterative Model: Similar to the waterfall model, but allows for repetitive cycles of development and refinement.Each iteration includes its own planning, design, implementation, and testing phases.
+
+Examples of companies that use the Iterative Model are:
+   1. NASA: NASA used the iterative model for the software development of Project Mercury – the first crewed space flight of United States
+  2. Microsoft:Microsoft used the iterative development model in software development, which brought this IT method to mainstream practices. 
+
+
+3. Spiral Model: Combines elements of both the waterfall and iterative models.Development occurs in a series of repeating cycles called spirals, with each spiral representing a phase in the SDLC.Spiral model is most important Development Life Cycle model. This model is a combination of iterative development process model and sequential linear development model .it is similar to the incremental model, with more risk analysis it also based upon the unique risk patterns of the project also known as spiral life-cycle model.
+
+Example of a company that use the Spiral Model is Microsoft.Microsoft used it to develop early versions of Windows.The Gantt chart software was made using the model as well.
+
+
+4. V-Model:An extension of the waterfall model where each development stage has a corresponding testing phase.The development and testing phases are executed in a parallel fashion.The V-Model is often used in safety: critical systems, such as aerospace and defence systems, because of its emphasis on thorough testing and its ability to clearly define the steps involved in the software development process.
+
+Examples of companies that use the Agile Model are:
+  1.NASA: for its Space Shuttles
+  2.Tesla: for its automotive self-driving and electric vehicles.
+   
