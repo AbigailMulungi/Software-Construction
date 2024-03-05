@@ -1,0 +1,46 @@
+MOMODOU JALLOW IS19B00/157
+Ankunda Mwebembezi J22B23/011
+Mulungi Abigail Agnes J22B23/031
+
+
+OVERVIEW:
+
+This project consists of a simple calculator implemented in Python. The calculator provides basic arithmetic operations such as addition, subtraction, multiplication, and division.
+Files:
+
+    calculator.py: Contains the implementation of the Calculator class, which provides methods for arithmetic operations.
+    test_calculator.py: Contains unit tests for the Calculator class to ensure its functionality is correct.
+    calculator_refactored.py: Contains refactored code to improve readability, efficiency, and adherence to best practices:
+
+
+
+RED:
+
+The test_calculator.py file contains unit tests for the Calculator class. Each test case validates the correctness of a specific arithmetic operation method in the Calculator class.
+Usage:
+
+To use the calculator, simply import the Calculator class from calculator.py and call its methods with appropriate arguments.
+
+GREEN:
+  Calculator Class:
+    The Calculator class provides static methods for performing arithmetic operations:
+
+    add(a, b): Adds two numbers a and b.
+    subtract(a, b): Subtracts a from b.
+    multiply(a, b): Multiplies a and b.
+    divide(a, b): Divides a by b. If b is zero, returns positive infinity.
+
+    Usage:
+        To use the calculator, simply import the Calculator class from calculator.py and call its methods with appropriate arguments.
+
+REFACTORING:
+
+The Calculator class and the test code have been refactored to improve readability, efficiency, and adherence to best practices:
+
+    Calculator Class Refactoring:
+        The arithmetic operation methods (add, subtract, multiply, divide) have been converted to static methods, improving efficiency by eliminating the need for instance creation.
+        Division by zero handling in the divide method has been refactored to use a conditional expression, returning positive infinity instead of raising an exception.
+
+    Test Code Refactoring:
+        The test code has been streamlined by removing unnecessary setup methods (setUp), improving code conciseness while maintaining test coverage.
+        Docstrings have been added to methods and classes to provide clear documentation for each component, enhancing readability and understanding.
